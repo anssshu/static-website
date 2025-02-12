@@ -11,6 +11,12 @@ data = df.values.tolist()
 headers = data[0]
 rows = data[1:]
 
+#replace NaN with empty string
+for i in range(len(rows)):
+    for j in range(len(rows[i])):
+        if pd.isna(rows[i][j]):
+            rows[i][j] = ''
+        print (rows[i][j])
 # Create a dictionary to hold the data
 data_dict = {
     "headers": headers,
@@ -18,7 +24,7 @@ data_dict = {
 }
 
 # Write the data to a JSON file
-with open('github/static-website/data.json', 'w') as json_file:
+with open('github/static-website/data2.json', 'w') as json_file:
     json.dump(data_dict, json_file, indent=2)
 
 print('Data has been written to data.json')
