@@ -2,7 +2,7 @@ import pandas as pd
 import json
 
 # Read the Excel file
-df = pd.read_excel('data.xlsx', header=None)
+df = pd.read_excel('github/static-website/data.xlsx', header=None)
 
 # Convert the DataFrame to a list of lists
 data = df.values.tolist()
@@ -18,7 +18,7 @@ data_dict = {
 }
 
 # Write the data to a JSON file
-with open('data.json', 'w') as json_file:
+with open('github/static-website/data.json', 'w') as json_file:
     json.dump(data_dict, json_file, indent=2)
 
 print('Data has been written to data.json')
