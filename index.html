@@ -1,26 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Static Website</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Data Display</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f2f2f2;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Welcome to My Static Website</h1>
-    </header>
-    <main>
-        <p>This is a simple static webpage hosted on GitHub Pages.</p>
-        <h2>Data from Excel</h2>
-        <table id="data-table">
-            <!-- Table data will be inserted here -->
-        </table>
-        <p><a href="https://anssshu.github.io/static-website/">View the site on GitHub Pages</a></p>
-    </main>
-    <footer>
-        <p>&copy; 2023 My Static Website</p>
-    </footer>
-    <script src="script.js"></script>
+  <h1>Data from Excel</h1>
+  <table id="data-table">
+    <thead>
+      <tr id="table-headers"></tr>
+    </thead>
+    <tbody id="table-rows"></tbody>
+  </table>
+  <script src="script.js"></script>
 </body>
 </html>
